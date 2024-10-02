@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Start debug on CH32V307",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/basebrd_fw.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "showDevDebugOutput": "raw",
+            //"liveWatch": { "enabled": true, "samplesPerSecond": 2 } ,
+            "svdFile": "${workspaceFolder}/svd/CH32V307xx.svd",
+            "configFiles": [
+                "${workspaceFolder}/wch/wch-riscv_orig.cfg"
+            ],
+            "postLaunchCommands": [
+                "b main",
+                "set mem inaccessible-by-default off",
+                "set architecture riscv:rv32",
+                "set remotetimeout unlimited"
+            ],
+            "preLaunchTask": "cmake build"
+        }
+    ]
+}

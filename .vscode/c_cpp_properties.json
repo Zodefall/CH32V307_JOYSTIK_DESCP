@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "myConfigurationName",
+            "configurationProvider": "ms-vscode.cmake-tools",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/rtos_wrapper",
+                "${workspaceFolder}/rtos_wrapper/FreeRtos",
+                "${workspaceFolder}/include/tasks",
+                "${workspaceFolder}/utils/delay",
+                "${workspaceFolder}/FreeRTOS/include",
+                "${workspaceFolder}/tpl_lib",
+                "${workspaceFolder}/wch/hal_libraries/ch32v307_hal/include",
+                "${workspaceFolder}/wch/hal_libraries/cmsis/include",
+            ],
+            "defines": [],
+            "compilerPath": "C:\\devtools\\riscv_gcc\\bin\\riscv-none-elf-g++.exe",
+            "cStandard": "c20",
+            "cppStandard": "c++20",
+            "IntelliSenseMode": "gcc-arm"
+        }
+    ],
+    "version": 4
+}
